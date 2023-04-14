@@ -33,7 +33,9 @@ const TrackDetail = () => {
   return (
     <S.DetailPageContainer>
       <S.DetailPageContent>
-        <S.DetailPageIconContainer></S.DetailPageIconContainer>
+        <S.DetailPageIconContainer>
+          <img src="/icons/back.png" alt="icon" width={40} height={40} />
+        </S.DetailPageIconContainer>
         <div>
           <img src={track.image} alt={track.title} width={300} height={300} />
         </div>
