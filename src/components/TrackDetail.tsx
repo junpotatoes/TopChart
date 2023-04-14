@@ -5,11 +5,13 @@ import * as S from '../styles/TrackDetail.style';
 import { Track } from '../api/api';
 
 const TrackDetail = () => {
+  const navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
   const [track, setTrack] = useState<Track | null>(null);
 
   useEffect(() => {
     axios
+
       .get(`https://itunes.apple.com/lookup?id=${id}`)
       .then((response) => {
         const entry = response.data.results[0];
@@ -34,7 +36,9 @@ const TrackDetail = () => {
     <S.DetailPageContainer>
       <S.DetailPageContent>
         <S.DetailPageIconContainer>
-          <img src="/icons/back.png" alt="icon" width={40} height={40} />
+          <div onClick={() => navigate(`/`)}>
+            <img src="/icons/back.png" alt="icon" width={40} height={40} />
+          </div>
         </S.DetailPageIconContainer>
         <div>
           <img src={track.image} alt={track.title} width={300} height={300} />
