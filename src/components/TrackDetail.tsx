@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo, useCallback } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import * as S from '../styles/TrackDetail.style';
@@ -11,7 +11,6 @@ const TrackDetail = () => {
 
   useEffect(() => {
     axios
-
       .get(`https://itunes.apple.com/lookup?id=${id}`)
       .then((response) => {
         const entry = response.data.results[0];
@@ -28,6 +27,14 @@ const TrackDetail = () => {
       });
   }, [id]);
 
+  const audioElement = useMemo(() => {
+    return track ? <audio src={track.previewUrl} controls /> : null;
+  }, [track]);
+
+  const handleBackButtonClick = useCallback(() => {
+    navigate(`/`);
+  }, [navigate]);
+
   if (!track) {
     return <div>Loading...</div>;
   }
@@ -36,7 +43,7 @@ const TrackDetail = () => {
     <S.DetailPageContainer>
       <S.DetailPageContent>
         <S.DetailPageIconContainer>
-          <div onClick={() => navigate(`/`)}>
+          <div onClick={handleBackButtonClick}>
             <img src="/icons/back.png" alt="icon" width={40} height={40} />
           </div>
         </S.DetailPageIconContainer>
@@ -47,9 +54,7 @@ const TrackDetail = () => {
           <h1>{track.title}</h1>
           <h2>{track.artist}</h2>
         </div>
-        <div>
-          <audio src={track.previewUrl} controls />
-        </div>
+        <div>{audioElement}</div>
       </S.DetailPageContent>
     </S.DetailPageContainer>
   );
