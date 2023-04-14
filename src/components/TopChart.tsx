@@ -42,7 +42,14 @@ const TopChart = ({}) => {
   return (
     <S.Top100Container>
       <S.Top100Title>Top 100</S.Top100Title>
-      <S.SearchBarContainer></S.SearchBarContainer>
+      <S.SearchBarContainer>
+        <S.SearchBar
+          type="text"
+          placeholder="노래를 검색해주세요"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+      </S.SearchBarContainer>
 
       {sortedTracks.map((track) => (
         <Link to={`/track/${track.id}`} key={track.id}>
