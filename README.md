@@ -3,13 +3,21 @@
 ### 이름 : 최준호
 
 <br/>
-<br/>
 
 #### 프로젝트 구동방법
 
 1. 터미널을 통하여 git clone을 합니다.(git clone https://github.com/junpotatoes/TopChart.git)
 2. 터미널 해당 디렉토리에서 'npm install' 명령어를 실행하여 프로젝트에 필요한 라이브러리들을 설치합니다.
 3. 'npm run dev' 명령어를 실행하여 'http://localhost:3000' 주소로 접속합니다.
+
+### 프로젝트에 대하여
+
+- 이 프로젝트는 외부 api를 이용하여 TOP100음원 차트 사이트입니다.
+- create-react-app이 아닌 react-boilerplate 환경 개발
+- 검색기능구현 / 정렬기능구현 (오름차순/내림차순/초기상태)
+- 유지보수 및 코드가독성을 위하여 styled-components 파일 관리
+
+<br/>
 
 ## 기술 스택
 
