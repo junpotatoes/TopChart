@@ -41,7 +41,7 @@ const TopChart = ({}) => {
 
   return (
     <S.Top100Container>
-      <S.Top100Title>Top 100</S.Top100Title>
+      <S.Top100Title>ElMusic</S.Top100Title>
       <S.SearchBarContainer>
         <S.SearchBar
           type="text"
