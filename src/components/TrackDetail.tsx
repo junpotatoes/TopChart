@@ -30,7 +30,23 @@ const TrackDetail = () => {
     return <div>Loading...</div>;
   }
 
-  return <div></div>;
+  return (
+    <S.DetailPageContainer>
+      <S.DetailPageContent>
+        <S.DetailPageIconContainer></S.DetailPageIconContainer>
+        <div>
+          <img src={track.image} alt={track.title} width={300} height={300} />
+        </div>
+        <div>
+          <h1>{track.title}</h1>
+          <h2>{track.artist}</h2>
+        </div>
+        <div>
+          <audio src={track.previewUrl} controls />
+        </div>
+      </S.DetailPageContent>
+    </S.DetailPageContainer>
+  );
 };
 
 export default TrackDetail;
