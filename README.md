@@ -1,14 +1,15 @@
 # TOP 100 차트 페이지 구현
 
-### 최준호
+### 이름 : 최준호
+
+<br/>
+<br/>
 
 #### 프로젝트 구동방법
 
-1. 터미널을 통하여 git clone을 합니다.
-2. 터미널에서 'npm install' 명령어를 실행하여 프로젝트에 필요한 라이브러리들을 설치합니다.
+1. 터미널을 통하여 git clone을 합니다.(git clone https://github.com/junpotatoes/TopChart.git)
+2. 터미널 해당 디렉토리에서 'npm install' 명령어를 실행하여 프로젝트에 필요한 라이브러리들을 설치합니다.
 3. 'npm run dev' 명령어를 실행하여 'http://localhost:3000' 주소로 접속합니다.
-
-배포링크:
 
 ## 기술 스택
 
