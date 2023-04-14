@@ -49,8 +49,34 @@ const TopChart = ({}) => {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
+        <button
+          onClick={() => {
+            setIsAscendingOrder(true);
+            setIsDescendingOrder(false);
+            setIsInitialOrder(true);
+          }}
+        >
+          초기화
+        </button>
+        <button
+          onClick={() => {
+            setIsAscendingOrder(true);
+            setIsDescendingOrder(false);
+            setIsInitialOrder(false);
+          }}
+        >
+          오름차순
+        </button>
+        <button
+          onClick={() => {
+            setIsAscendingOrder(false);
+            setIsDescendingOrder(true);
+            setIsInitialOrder(false);
+          }}
+        >
+          내림차순
+        </button>
       </S.SearchBarContainer>
-
       {sortedTracks.map((track) => (
         <Link to={`/track/${track.id}`} key={track.id}>
           <S.TrackContainer key={track.id}>
