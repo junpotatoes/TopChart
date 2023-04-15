@@ -1,8 +1,8 @@
 import { useEffect, useState, useMemo, useCallback } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
-import * as S from '../styles/TrackDetail.style';
-import { Track } from '../api/api';
+import * as S from '@/styles/TrackDetail.style';
+import { Track } from '@/api/api';
 
 const TrackDetail = () => {
   const navigate = useNavigate();

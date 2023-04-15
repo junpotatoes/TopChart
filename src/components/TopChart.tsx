@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { fetchTop100 } from '../api/api';
+import { fetchTop100 } from '@/api/api';
 import { Link } from 'react-router-dom';
-import * as S from '../styles/TopChart.style';
-import { Track } from '../api/api';
+import * as S from '@/styles/TopChart.style';
+import { Track } from '@/api/api';
 
 const TopChart = ({}) => {
   const [tracks, setTracks] = useState<Track[]>([]);
