@@ -7,6 +7,10 @@ export const TrackContainer = styled.div`
   grid-column: span 1;
   border: 1px solid ${(props) => props.theme.black};
   border-radius: 4px;
+
+  @media ${(props) => props.theme.mobile} {
+    width: 100%;
+  }
 `;
 
 export const TrackInfo = styled.div`
