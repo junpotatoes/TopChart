@@ -56,4 +56,8 @@ export const SearchBar = styled.input`
   border: 1px solid gray;
   width: 200px;
   margin-right: 10px;
+
+  @media ${(props) => props.theme.mobile} {
+    padding: 4px;
+  }
 `;
