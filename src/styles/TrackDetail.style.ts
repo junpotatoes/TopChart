@@ -18,11 +18,16 @@ export const DetailPageContent = styled.div`
 
   div {
     margin-top: 20px;
+
+    @media ${(props) => props.theme.mobile} {
+      right: 170px;
+      top: -220px;
+    }
   }
 `;
 
 export const DetailPageIconContainer = styled.div`
   position: absolute;
   top: -140px;
-  right: -140px;
+  left: -140px;
 `;
