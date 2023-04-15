@@ -47,6 +47,10 @@ export const SearchBarContainer = styled.div`
     border-radius: 4px;
     background-color: ${(props) => props.theme.gray};
     margin-right: 5px;
+
+    @media ${(props) => props.theme.mobile} {
+      padding: 4px;
+    }
   }
 `;
 
