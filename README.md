@@ -15,7 +15,7 @@
 - 이 프로젝트는 외부 api를 이용하여 TOP100음원 차트 사이트입니다.
 - create-react-app이 아닌 react-boilerplate 환경 개발
 - 검색기능구현 / 정렬기능구현 (오름차순/내림차순/초기상태)
-- 유지보수 및 코드가독성을 위하여 styled-components 파일 관리
+- 유지보수 및 코드가독성을 위하여 styled-components 파일 관리 및 절대경로 수정
 
 <br/>
 
